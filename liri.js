@@ -13,9 +13,9 @@ var client = new Twitter(keys.twitter);
 function chooseAppToRun() {
   
   // capture the input as either two or three input arguments
-  var app = process.argv[2].trim();
+  var app = process.argv[2];
   if (process.argv[3]) {
-    var param = process.argv[3].trim();
+    var param = process.argv[3];
   }
   
   // match the input with the function
@@ -63,7 +63,7 @@ function spotifySong(param) {
   var songQuery = param;
   
   if (!songQuery) {
-    songQuery = "Never Gonna Give You Up";
+    songQuery = "Top Off";
   }
   
   // use tracks endpoint to search for a song on Spotify
@@ -104,7 +104,7 @@ function getMovie(param) {
   var title = param;
   
   if (!title) {
-    title = "Groundhog Day";
+    title = "Coming to America";
   }
   
   // use npm request package to make a request to OMDb for the input title
